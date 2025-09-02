@@ -1,0 +1,215 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #1a1a1a; /* dark background */
+  --foreground: #ffffff; /* primary text */
+
+  --card: rgba(255, 255, 255, 0.1); /* glass surfaces */
+  --card-foreground: #ffffff;
+
+  --popover: rgba(255, 255, 255, 0.2);
+  --popover-foreground: #ffffff;
+
+  --primary: #d5006d; /* pink brand */
+  --primary-foreground: #ffffff;
+
+  --secondary: #00bfff; /* bright blue for filters */
+  --secondary-foreground: #1a1a1a; /* readable on blue */
+
+  --muted: #4b5563; /* slate */
+  --muted-foreground: #ffffff;
+
+  --accent: #d5006d; /* was blue; align accent to brand pink */
+  --accent-foreground: #ffffff;
+
+  --destructive: #ff4d4d;
+  --destructive-foreground: #ffffff;
+
+  --border: rgba(255, 255, 255, 0.2); /* slightly stronger for definition */
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: rgba(213, 0, 109, 0.55); /* focus ring in brand tone */
+
+  --chart-1: #d5006d;
+  --chart-2: #00bfff;
+  --chart-3: #00bfff;
+  --chart-4: #4b5563;
+  --chart-5: #ffffff;
+
+  --radius: 1rem;
+
+  /* Sidebar tokens (glass) */
+  --sidebar: #490830;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #d5006d;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(213, 0, 109, 0.16); /* hover/active bg on items */
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(213, 0, 109, 0.25); /* subtle pink border */
+  --sidebar-ring: rgba(213, 0, 109, 0.55);
+}
+
+.hidescrollbar::-webkit-scrollbar{
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* mirror in .dark to keep consistent dark-first theme */
+.dark {
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+  --card: rgba(255, 255, 255, 0.1);
+  --card-foreground: #ffffff;
+  --popover: rgba(255, 255, 255, 0.2);
+  --popover-foreground: #ffffff;
+  --primary: #d5006d;
+  --primary-foreground: #ffffff;
+  --secondary: #00bfff;
+  --secondary-foreground: #1a1a1a;
+  --muted: #4b5563;
+  --muted-foreground: #ffffff;
+  --accent: #d5006d;
+  --accent-foreground: #ffffff;
+  --destructive: #ff4d4d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.2);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: rgba(213, 0, 109, 0.55);
+  --chart-1: #d5006d;
+  --chart-2: #00bfff;
+  --chart-3: #00bfff;
+  --chart-4: #4b5563;
+  --chart-5: #ffffff;
+  --sidebar: rgba(255, 255, 255, 0.08);
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #d5006d;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(213, 0, 109, 0.16);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(213, 0, 109, 0.25);
+  --sidebar-ring: rgba(213, 0, 109, 0.55);
+}
+/* update inline theme color variables to new palette */
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* 5-color palette (primary + neutrals + accents) */
+  --color-brand: 213 0 109; /* #D5006D */
+  --color-bg: 26 26 26; /* #1A1A1A */
+  --color-surface: 26 26 26; /* use same dark surface, glass via --card */
+  --color-accent-blue: 59 130 246; /* #3B82F6 */
+  --color-accent-green: 16 185 129; /* #10B981 */
+}
+
+/* make card/navglass use semantic tokens */
+.card {
+  @apply rounded-2xl border backdrop-blur-md shadow-[0_8px_30px_rgb(0_0_0/0.35)];
+  background-color: var(--card);
+  border-color: var(--border);
+}
+.card-hover {
+  @apply transition hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgb(0_0_0/0.45)];
+}
+.navglass {
+  background-color: var(--card);
+  @apply backdrop-blur-xl border-b;
+  border-color: var(--border);
+}
+/* buttons/badges keep using brand/accents */
+.btn-brand {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 text-white hover:opacity-90 transition;
+  background-color: rgb(var(--color-brand));
+}
+.badge-pink {
+  background-color: color-mix(in oklab, rgb(var(--color-brand)) 15%, transparent);
+  color: rgb(var(--color-brand));
+}
+.badge-blue {
+  background-color: rgb(0 191 255 / 0.15);
+  color: #00bfff;
+}
+.badge-green {
+  background-color: rgb(16 185 129 / 0.15);
+  color: rgb(16 185 129);
+}
+
+.badge {
+  @apply rounded-full px-2.5 py-1 text-xs font-medium;
+}
+
+/* helper class to apply a dark pink gradient + glass halo if needed elsewhere */
+.neo-pink-gradient {
+  background-image: radial-gradient(60% 35% at 10% -10%, rgba(213, 0, 109, 0.18), transparent),
+    radial-gradient(40% 30% at 90% 10%, rgba(213, 0, 109, 0.12), transparent),
+    linear-gradient(to bottom, #0a0a12, #0c0a12 40%, #0a0a10 75%);
+}
+.neo-glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(213, 0, 109, 0.22);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 30px 80px -30px rgba(0, 0, 0, 0.7);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
