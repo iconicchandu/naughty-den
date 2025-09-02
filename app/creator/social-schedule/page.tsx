@@ -89,7 +89,7 @@ export default function CreatorSocialSchedulePage() {
             <DialogTrigger asChild>
               <Button className="bg-pink-500 text-white hover:bg-pink-600">+ Schedule Post</Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-lg">
+            <DialogContent className="sm:max-w-lg bg-[#5f073a37] backdrop-blur-[10px]">
               <DialogHeader>
                 <DialogTitle>{editing ? "Edit Scheduled Post" : "Schedule a Post"}</DialogTitle>
                 <DialogDescription>Select platforms, write your post, and choose a time.</DialogDescription>

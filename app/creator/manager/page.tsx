@@ -83,7 +83,7 @@ export default function CreatorManagerPage() {
             <DialogTrigger asChild>
               <Button className="bg-pink-500 text-white hover:bg-pink-600">+ Add Manager</Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-lg">
+            <DialogContent className="sm:max-w-lg bg-[#5f073a37] backdrop-blur-[10px]">
               <DialogHeader>
                 <DialogTitle>Add Manager</DialogTitle>
                 <DialogDescription>Invite a manager and set their permissions.</DialogDescription>
@@ -129,7 +129,7 @@ export default function CreatorManagerPage() {
       </div>
 
       <Dialog open={becomeOpen} onOpenChange={setBecomeOpen}>
-        <DialogContent className="sm:max-w-lg">
+        <DialogContent className="sm:max-w-lg bg-[#5f073a37] backdrop-blur-[10px]">
           <DialogHeader>
             <DialogTitle>Become a Manager</DialogTitle>
             <DialogDescription>Tell us about your experience and why you’d like to manage creators.</DialogDescription>

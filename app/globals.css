@@ -51,14 +51,15 @@
   --sidebar-ring: rgba(213, 0, 109, 0.55);
 }
 
-.hidescrollbar::-webkit-scrollbar{
-  display: none;
+.scrollbar-hide::-webkit-scrollbar{
+    display: none;
 }
 
-.hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+.scrollbar-hide{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+
 /* mirror in .dark to keep consistent dark-first theme */
 .dark {
   --background: #1a1a1a;

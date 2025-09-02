@@ -88,7 +88,7 @@ export default function CreatorContentPage() {
             <DialogTrigger asChild>
               <Button className="bg-pink-500 text-white hover:bg-pink-600">+ Upload Content</Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-lg">
+            <DialogContent className="sm:max-w-lg bg-[#5f073a37] backdrop-blur-[10px]">
               <DialogHeader>
                 <DialogTitle>Upload Content</DialogTitle>
                 <DialogDescription>Fill the details and upload your photo or video.</DialogDescription>

@@ -52,7 +52,7 @@ export default function FeedPage() {
   return (
     <div className="flex gap-6">
       {/* left categories sidebar with red tone */}
-      <aside className="sticky top-16 hidden h-[calc(100vh-6rem)] w-60 shrink-0 overflow-y-auto rounded-xl border border-white/5 bg-[#3b0d0d] p-4 md:block">
+      <aside className="sticky top-16 hidden h-[calc(100vh-6rem)] w-60 shrink-0 overflow-y-auto rounded-xl border border-white/5 bg-[#3b0d0d] p-4 md:block scrollbar-hide">
         <h3 className="mb-3 text-sm font-semibold text-white">Categories</h3>
         <nav className="space-y-1">
           {CATEGORIES.map((c) => (
