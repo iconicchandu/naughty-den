@@ -52,7 +52,7 @@ export default function FeedPage() {
   return (
     <div className="flex gap-6">
       {/* left categories sidebar with red tone */}
-      <aside className="sticky top-16 hidden h-[calc(100vh-6rem)] w-60 shrink-0 overflow-y-auto rounded-xl border border-white/5 bg-[#3b0d0d] p-4 md:block scrollbar-hide">
+      <aside className="sticky top-16 hidden h-[calc(100vh-6rem)] w-60 shrink-0 overflow-y-auto rounded-xl border border-white/5 bg-[#490830] p-4 md:block scrollbar-hide">
         <h3 className="mb-3 text-sm font-semibold text-white">Categories</h3>
         <nav className="space-y-1">
           {CATEGORIES.map((c) => (
@@ -61,7 +61,7 @@ export default function FeedPage() {
               onClick={() => setActiveCat(c)}
               className={cn(
                 "w-full rounded-lg px-3 py-2 text-left text-sm text-white/80 hover:bg-white/10",
-                activeCat === c && "bg-[#8a1c1c] text-white hidescrollbar",
+                activeCat === c && "bg-[#5f073a] text-white hidescrollbar",
               )}
             >
               {c}
@@ -79,7 +79,7 @@ export default function FeedPage() {
               onClick={() => setShowType(t)}
               className={cn(
                 "w-full rounded-lg px-3 py-2 text-left text-sm text-white/80 hover:bg-white/10",
-                showType === t && "bg-[#8a1c1c] text-white",
+                showType === t && "bg-[#5f073a] text-white",
               )}
             >
               {t}

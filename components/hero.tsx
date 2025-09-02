@@ -3,14 +3,14 @@ import Link from "next/link"
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden h-[90vh]">
       {/* Background with blur */}
       <Image
-        src="/images/hero-reference.png"
+        src="/imge.jpg"
         alt="Hero background"
         width={1920}
         height={1080}
-        className="absolute inset-0 w-full h-[70vh] object-cover"
+        className="absolute inset-0 w-full h-[90vh] object-cover"
         priority
       />
       <div className="absolute inset-0 bg-slate-950/60 backdrop-blur-[2px]" />

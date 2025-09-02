@@ -67,7 +67,9 @@ export default function CreatorLayout({ children }: { children: React.ReactNode 
       >
         <SidebarContent>
           <SidebarGroup>
+            <Link href="/">
             <h2>Naughty Den</h2>
+            </Link>
             <SidebarGroupLabel>Creator Studio</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
